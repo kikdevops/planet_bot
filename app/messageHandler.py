@@ -8,11 +8,12 @@ def load_modules():
    files = os.listdir("commands")
    modules = filter(lambda x: x.endswith('.py'), files)
    for m in modules:
+       print("commands." + m[0:-3])
        importlib.import_module("commands." + m[0:-3])
 
 def get_answer(body):
 	#default_message
-    message = "Прости, кожаный мешок, не понимаю тебя."
+    message = "Пожалуйста подождите, мы приступили к обработке вашего запроса."
     attachment = ''
     for c in command_list:
         if body in c.keys:
@@ -20,10 +21,9 @@ def get_answer(body):
     return message, attachment
 
 def create_hello(data, user_token):
-	user_id = data['user_id']
-#	message = get_hello()
-	message = 'Ну что, кусок мяса, вступил?'
-	vkapi.send_message(user_id, user_token, message)
+  user_id = data['user_id']
+  message = "Мы рады приветствовать вас в группе путешественников!\nЕсли у вас возникнут какие либо вопросы вы всегда можете их задать в сообщениях для группы."
+  vkapi.send_message(user_id, user_token, message)
 
 
 def create_answer(data, token):
