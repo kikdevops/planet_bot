@@ -23,4 +23,4 @@ def processing():
         messageHandler.create_hello(data['object'], user_token)
         return 'ok'
 
-app.run(debug = True)
+#app.run(debug = True)
