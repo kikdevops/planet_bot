@@ -1,7 +1,7 @@
 import command_system
 
 def hello():
-   message = 'Привет, кожаный мешок!\nЯ новый бот-турперелет.'
+   message = 'Привет, как дела?\n'
    return message, ''
 
 hello_command = command_system.Command()
