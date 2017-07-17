@@ -1,4 +1,4 @@
-token = '3071409edaec354dba376a661c9dc4e096cf30ab1d844010223333cf53433231588aa88b91a39e221253d'
+token = '771f009d4382384ff7ce6dfd22ccbd227812b05cf25397fd2d6fa88cc9de598cadcdfe1aecf0b794d0f16'
 confirmation_token = 'ce4cf456'
 
 #id of standalone app
@@ -6,4 +6,4 @@ hello_app_id = 6113618
 
 #Get user token with
 #https://oauth.vk.com/authorize?client_id=6113618&scope=notify,photos,friends,audio,video,notes,pages,docs,status,questions,offers,wall,groups,messages,notifications,stats,ads,offline&redirect_uri=http://api.vk.com/blank.html&display=page&response_type=token
-user_token = '56f3687082ebe664c5c0edb66d23c33f0ffd932954d0fbd052acd63fc2811e66271315b60e01717d4adef'
+user_token = 'a04e7de10764122fa8cc09bcaf1be7f49b1ef97d68addc007a1e81c3e8b87939263fd1222c3d911ade81e'
