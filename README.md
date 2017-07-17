@@ -1,5 +1,7 @@
 HELP
 
+git clone https://github.com/kikdevops/planet_bot.git; cp -r planet_bot/app/* mysite/
+
 Run app with 
 ../flask/bin/python3.4 flask_app.py
 
