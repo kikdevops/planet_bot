@@ -1,3 +1,6 @@
 app/settings.py
 app/__pycache__
 app/.idea
+app/test.py
+__pycache__/
+*.py[cod]

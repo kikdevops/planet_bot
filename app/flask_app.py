@@ -1,9 +1,11 @@
 from flask import Flask, request, json
 from settings import *
 import messageHandler
+from operators_system import Operator
 
 
 app = Flask(__name__)
+operator = Operator()
 
 @app.route('/')
 def hello_world():
@@ -11,6 +13,10 @@ def hello_world():
 
 @app.route('/', methods=['POST'])
 def processing():
+
+    operator.id = operator_tokens
+    user_token = operator.id
+
     data = json.loads(request.data)
     if 'type' not in data.keys():
         return 'not vk'
@@ -23,4 +29,4 @@ def processing():
         messageHandler.create_hello(data['object'], user_token)
         return 'ok'
 
-#app.run(debug = True)
+app.run(debug = True)
