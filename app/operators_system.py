@@ -3,7 +3,11 @@ class Operator:
        self.__ids = []
 
    def rotate(self, l, n):
-    return l[n:] + l[:n]
+    if len(l) == 1:
+        res = l
+    else:
+        res = l[n:] + l[:n]
+    return res
 
    @property
    def id(self):
