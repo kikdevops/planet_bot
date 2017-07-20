@@ -4,3 +4,4 @@ app/.idea
 app/test.py
 __pycache__/
 *.py[cod]
+/app/planetbot.log
