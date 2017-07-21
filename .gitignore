@@ -1,7 +1,7 @@
-app/settings.py
-app/__pycache__
-app/.idea
-app/test.py
+bot/settings.py
+bot/__pycache__
+bot/.idea
+bot/test.py
 __pycache__/
 *.py[cod]
-/app/planetbot.log
+planetbot.log

@@ -1,7 +1,7 @@
-import vkapi
+import bot.vkapi as vkapi
 import os
 import importlib
-from command_system import command_list
+from bot.command_system import command_list
 
 def load_modules():
    # путь от рабочей директории, ее можно изменить в настройках приложения
