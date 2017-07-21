@@ -5,7 +5,7 @@ from bot.command_system import command_list
 
 def load_modules():
    # путь от рабочей директории, ее можно изменить в настройках приложения
-   files = os.listdir("commands")
+   files = os.listdir("bot/commands")
    modules = filter(lambda x: x.endswith('.py'), files)
    for m in modules:
        print("commands." + m[0:-3])
