@@ -1,4 +1,4 @@
-import command_system
+import bot.command_system
 
 def hello():
    message = 'Привет, как дела?\n'
