@@ -1,4 +1,4 @@
-import bot.command_system
+import bot.command_system as command_system
 
 def hot():
    message = 'Едь на дачу кусок мяса.'

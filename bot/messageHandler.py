@@ -9,7 +9,7 @@ def load_modules():
    modules = filter(lambda x: x.endswith('.py'), files)
    for m in modules:
        print("commands." + m[0:-3])
-       importlib.import_module("commands." + m[0:-3])
+       importlib.import_module("bot.commands." + m[0:-3])
 
 def get_answer(body):
 	#default_message
