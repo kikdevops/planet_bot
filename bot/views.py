@@ -22,9 +22,9 @@ def processing():
         return 'not vk'
     if data['type'] == 'confirmation':
         return confirmation_token
-    elif data['type'] == 'message_new':
-        messageHandler.create_answer(data['object'], token)
-        return 'ok'
+#    elif data['type'] == 'message_new':
+#        messageHandler.create_answer(data['object'], token)
+#        return 'ok'
     elif data['type'] == 'group_join':
         messageHandler.create_hello(data['object'], user_token)
         return 'ok'
