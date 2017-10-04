@@ -2,6 +2,7 @@ import bot.vkapi as vkapi
 import os
 import importlib
 from bot.command_system import command_list
+from bot.settings import bye_message
 
 def load_modules():
    # путь от рабочей директории, ее можно изменить в настройках приложения
@@ -25,6 +26,11 @@ def create_hello(data, user_token):
   message = '''Здравствуйте.\n Добро пожаловать в нашу группу.\n Вы в ближайшее время планируете отдых или подбираете варианты на будущее ?'''
 
 #  message = user_token
+  vkapi.send_message(user_id, user_token, message)
+
+def create_bye(data, user_token):
+  user_id = data['user_id']
+  message = bye_message
   vkapi.send_message(user_id, user_token, message)
 
 

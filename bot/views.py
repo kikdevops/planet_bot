@@ -28,4 +28,7 @@ def processing():
     elif data['type'] == 'group_join':
         messageHandler.create_hello(data['object'], user_token)
         return 'ok'
+    elif data['type'] == 'group_leave':
+        messageHandler.create_bye(data['object'], user_token)
+        return 'ok'
 
