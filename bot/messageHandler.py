@@ -23,7 +23,8 @@ def get_answer(body):
 
 def create_hello(data, user_token):
   user_id = data['user_id']
-  message = hello_message
+  user_data = vkapi.get_user_data(user_id)
+  message = hello_message.format(name = user_data[0]['first_name'])
   vkapi.send_message(user_id, user_token, message)
 
 def create_bye(data, user_token):
