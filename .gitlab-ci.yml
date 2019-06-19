@@ -1,0 +1,12 @@
+image: alpine
+
+stages:
+  - build
+
+build:
+  stage: build
+  tags:
+    - beholder
+  script:
+    - ls /
+    - pwd
