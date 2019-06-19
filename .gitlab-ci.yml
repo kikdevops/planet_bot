@@ -1,7 +1,11 @@
-image: alpine
+image: docker:dind
 
 stages:
   - build
+
+before_script:
+  - env
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
 
 build:
   stage: build
@@ -10,3 +14,6 @@ build:
   script:
     - ls /
     - pwd
+    - docker build -f Dockerfile -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA:0:8} .
+    - docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA:0:8}
+
